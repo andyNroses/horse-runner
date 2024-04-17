@@ -805,13 +805,7 @@
             // Reset the time clock.
             this.time = getTimeStamp();
 
-            postMessage("game_over", {
-                score: this.highestScore,
-            });
-
-            window.ReactNativeWebView.postMessage("game_over", {
-                score: this.highestScore,
-            });
+            window.ReactNativeWebView.postMessage(`gameover_${this.highestScore}`);
         },
 
         stop: function () {

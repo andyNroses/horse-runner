@@ -808,6 +808,10 @@
             postMessage("game_over", {
                 score: this.highestScore,
             });
+
+            window.ReactNativeWebView.postMessage("game_over", {
+                score: this.highestScore,
+            });
         },
 
         stop: function () {

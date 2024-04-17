@@ -804,8 +804,7 @@
 
             // Reset the time clock.
             this.time = getTimeStamp();
-
-            window.ReactNativeWebView.postMessage(`gameover_${this.highestScore}`);
+            window.ReactNativeWebView.postMessage(`gameover_${this.distanceMeter.getActualDistance(this.highestScore)}`);
         },
 
         stop: function () {

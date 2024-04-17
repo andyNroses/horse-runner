@@ -518,6 +518,8 @@
 
             window.addEventListener(Runner.events.FOCUS,
                 this.onVisibilityChange.bind(this));
+            
+            hidePressSpaceToStart();
         },
 
         clearCanvas: function () {
@@ -2744,6 +2746,11 @@
         }
     };
 })();
+
+const hidePressSpaceToStart = () => {
+    var box = document.getElementById("messageBox");
+    box.style.visibility = "hidden";
+}
 
 
 function onDocumentLoad() {
